@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "interview-sim"
+version = "0.1.0"
+description = "Simulate full user interview sessions — participant roleplay, transcript, auto-codes"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Kostas Kazakos", email = "kostas@cpr.tools" }]
+keywords = [
+    "ux-research", "interview", "simulation", "qualitative",
+    "llm", "auto-coding", "computational-product-research",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "click>=8.0",
+    "rich>=13.0",
+]
+
+[project.optional-dependencies]
+streamlit = ["streamlit>=1.30"]
+openai   = ["openai>=1.0"]
+anthropic = ["anthropic>=0.25"]
+gemini   = ["google-genai>=1.0"]
+llm      = ["openai>=1.0", "anthropic>=0.25", "google-genai>=1.0"]
+dev      = ["pytest>=7.0", "ruff>=0.4"]
+
+[project.scripts]
+interview-sim = "interview_sim.cli:cli"
+
+[project.urls]
+Homepage   = "https://github.com/kgkazakos/interview-sim"
+Repository = "https://github.com/kgkazakos/interview-sim"
+
+[tool.setuptools.packages.find]
+where   = ["."]
+include = ["interview_sim*"]
+
+[tool.ruff]
+line-length    = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+ignore = ["E501"]

@@ -1,0 +1,20 @@
+{
+  "name": "Jamie Torres",
+  "age": 29,
+  "occupation": "UX Designer",
+  "tech_savviness": 4,
+  "verbosity": 3,
+  "sentiment": "mixed",
+  "pain_points": [
+    "slow navigation between sections",
+    "hard to find settings"
+  ],
+  "motivations": [
+    "staying organised",
+    "quick access to project files"
+  ],
+  "behaviour_traits": [
+    "use keyboard shortcuts wherever possible",
+    "read tooltips before asking for help"
+  ]
+}

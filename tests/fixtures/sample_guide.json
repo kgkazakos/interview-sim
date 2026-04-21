@@ -1,0 +1,26 @@
+{
+  "title": "Mobile App Usability Study",
+  "topic": "the mobile app",
+  "questions": [
+    {
+      "text": "Can you tell me about your overall experience using the app so far?",
+      "type": "opening",
+      "probes": ["How long have you been using it?"]
+    },
+    {
+      "text": "Walk me through what a typical session looks like for you.",
+      "type": "exploratory",
+      "probes": ["What do you usually do first?", "What happens next?"]
+    },
+    {
+      "text": "Where do things get tricky or frustrating for you?",
+      "type": "exploratory",
+      "probes": ["Can you describe a specific time that happened?"]
+    },
+    {
+      "text": "What would make this much better for you?",
+      "type": "closing",
+      "probes": []
+    }
+  ]
+}

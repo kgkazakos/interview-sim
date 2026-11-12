@@ -7,7 +7,7 @@ using one of three configurable backends.
 Install optional extras:
     pip install interview-sim[openai]       # GPT-4o-mini
     pip install interview-sim[anthropic]    # Claude Sonnet
-    pip install interview-sim[gemini]       # Gemini 3.1 Pro
+    pip install interview-sim[gemini]       # Gemini 4 Argon
     pip install interview-sim[llm]          # All three
 """
 from __future__ import annotations
@@ -152,7 +152,7 @@ def _enrich_gemini(result: SimulationResult) -> SimulationResult:
     client = genai.Client()
     combined_prompt = f"{_persona_system_prompt(result)}\n\n{_persona_user_prompt(result)}"
     response = client.models.generate_content(
-        model="gemini-3.1-pro-preview",
+        model="gemini-4-argon",
         contents=combined_prompt,
     )
     data = _parse_json_response(response.text)

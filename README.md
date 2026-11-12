@@ -41,7 +41,7 @@ pip install interview-sim[streamlit]
 # With LLM enrichment
 pip install interview-sim[openai]      # GPT-4o-mini
 pip install interview-sim[anthropic]   # Claude Sonnet
-pip install interview-sim[gemini]      # Gemini 3.1 Pro
+pip install interview-sim[gemini]      # Gemini 4 Argon
 pip install interview-sim[llm]         # All three
 ```
 
@@ -205,7 +205,7 @@ Question types: `opening` · `exploratory` · `probing` · `closing`
 |---------|-------|---------|
 | OpenAI | `gpt-4o-mini` | `--llm-backend openai` |
 | Anthropic | `claude-sonnet-4-6` | `--llm-backend anthropic` |
-| Gemini | `gemini-3.1-pro-preview` | `--llm-backend gemini` |
+| Gemini | `gemini-4-argon` | `--llm-backend gemini` |
 
 Enriched fields return `null` in JSON when no backend is specified.
 

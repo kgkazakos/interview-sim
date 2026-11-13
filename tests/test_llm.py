@@ -480,7 +480,7 @@ class TestGeminiBackend:
             enrich_simulation(result, backend="gemini")
 
         call_kwargs = mock_client.models.generate_content.call_args[1]
-        assert call_kwargs["model"] == "gemini-3.1-pro-preview"
+        assert call_kwargs["model"] == "gemini-4-argon"
 
     def test_gemini_contents_combines_prompts(self) -> None:
         result = _result()
